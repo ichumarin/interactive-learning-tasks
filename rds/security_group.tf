@@ -1,7 +1,7 @@
 resource "aws_security_group" "db" {
   name        = "db-sec-group"
   description = "allow trafic to DB"
-  vpc_id      = "vpc-0bf4e96462538b07a"
+  vpc_id      = var.vpc_id
   ingress {
     description = "MySQL"
     from_port   = 3306
